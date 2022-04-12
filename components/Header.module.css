@@ -1,0 +1,19 @@
+.Header{
+    background-image: url("/Headerbg_v4.png") ;
+    
+}
+
+.h1{
+    background: linear-gradient(90deg, rgba(146,52,149,1) 0%, rgba(89,36,133,1) 51%, rgba(112,21,117,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.Tools{
+  background-image: url("/Toolsbg_v5.png");
+  background-repeat: no-repeat;
+}

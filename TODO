@@ -1,0 +1,101 @@
+Ideen:  
+- Whitepaper summarized 
+- Exchange Finder 
+- Video Guides 
+- Über der Navbar so ein Feld einbauen wo man einen Verweis auf Neue Features hat, wie bei Coinmarketcap, soll wegklickbar sein
+
+TopTodo: 
+- Kurze Promo Section mit den aktuell verfügbaren PromoCodes + Aktionen + Newsletter
+- Search Widget
+ - Anschauen ob es Lösungen von Graphcms direkt gibt
+  - Abfrage an alles ob der String irgendein Ergebnis liefert?
+ - könnte komplex werden
+- Verweise auf die Seiten, Seiten erstellen
+ - Terms of Services & Privacy Policy
+- Accounts auf allen Social Plattformen claimen
+- Navbar Mobile Ansicht updaten
+- Headertext/Werbespruch neu überlegen
+ - Unter dem Header muss noch irgendwas grafisches hin sonst schaut es so fad aus
+
+Tools.jsx(page):
+- Listet alle Tools aus dem Schema auf in einer Art von Liste mit Pfeilen nach rechts
+ - wenn man draufdrückt kommt man auf die Unterseite von einem Tool
+ - Nutzen + wie man es benutzt erklären
+ - Sources auf die Seiten 
+ - selbst erstellte Tools custom machen wie exchange Finder
+
+Start Learning: 
+- Video Guides ?
+Categories: 
+ - Investing ?
+Tools: Auf eine Seite wo mit divcards die Articles von den Tools sind? oder nur die Links?
+ - Fear and Greed index
+ - Max Pain
+ - Futures Closeout
+ - cryptoquant/glassnode stats?
+ - TradingView
+ - DeFi Llama
+ - Find your perfect exchange/ exchange comparer
+Search: Suchzeile auf der man einfach die ganze Website durchsuchen kann
+
+DONE:
+- Navbar: DONE
+  - Grunddesign
+  - Search Bar im Frontend
+  - Category Buttons
+  - Dropdown
+  - Mobile Button
+  - Nav Items verschwinden/erscheinen bei Mobile
+  - Get Started Button fertig
+   - Items von Dropdown reichen runter und sind dann hinter den articles
+- Categories:
+  - Normale Categories in CMS erstellt
+  - Schema edited, dass Kategorien ein Boolean haben ob sie Beginnerfreundlich sind
+  - Categories werden ins richtige Feld gerendert
+- Header: DONE
+ - Css Fade Hintergrund
+ - Header Text
+ - Schriftart geändert
+ - Icon Pfeil nach unten
+ - Linie die Sections trennt
+- Carousel Section:
+ - Articles die getstarted True als Tag haben, in graph auf "beginner" ändern
+ - BeginnerPosts.jsx angelegt und Daten werden reingefetcht
+ - PostCard.jsx Div werden ungefähr gestyled 
+ - Carousel rendert falsch, Items untereinander gelöst, Styles mussten importiert werden
+ - Image Sizing, muss anscheinend als Background Image genutzt werden dass das geht
+ - Pfeile um nach links und rechts zu scrollen
+ - Excerpt kürzen, nach anzahl von zeichen, ... machen
+- Tools_home:
+ - Darunter eine Section mit einem Kurzüberblick von den Tools + Verweis auf die Seite
+- Pages
+ - _document.js für Schriftart eingebaut
+ - slug File Article
+  - Title, Content, Image wird ausgegeben
+  - Headings in Table of Contents bekommen
+  - Unterlinks bei Klick auf Heading funktioniert
+  - smooth scroll
+  - Featured Posts bei slug file unten 
+ - Alle Posts holen und im js die category filtern, geht in graphql nicht weil m:n beziehung (solved)
+ - slug File category, dass die Links funktionieren
+ - Tools im Schema erstellt + Testdaten
+ - Tools Seite erstellt, Graphql Daten werden ausgegeben
+ - ToolsDetail erstellt und Link darauf funktioniert
+ - ToolsDetail erstellen, PostDetail als Vorlage verwenden
+  - bessere Möglichkeit für Rich Text Rendering gefunden, kann jetzt alles rendern was geht
+- Footer
+ - 4 Spalten Layout
+ - Social Icons
+ - Copyright + Dynamisch änderndes Jahr 
+ - Logo
+- Promo Codes
+ - Seite erstellt + in Graphcms angelegt
+ - Promos können featured sein, werden oben gelistet + lila hinterlegt
+ - Sind Div Boxen die als Link zum Referral fungieren
+- Contact
+ - Erstellt + kurzer Text
+ - Team Members
+
+
+
+  
