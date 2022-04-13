@@ -1,0 +1,11 @@
+.navitem{
+    display:none;
+    z-index: 2;
+}
+
+.nav{
+    display: block;
+}
+
+.nav:hover .navitem {display: block;}
+

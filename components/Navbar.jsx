@@ -1,47 +1,44 @@
 import React from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
-import { getCategories, getCategories_beginner } from '../services';
+import { getCategories, getCategoriesAll, getCategories_beginner } from '../services';
 import { useEffect } from 'react/cjs/react.development';
 import SearchComponent from './SearchComponent';
 import Image from 'next/image'
+import "./Navbar.module.css"
 
-const Navbar = () => {
+const Navbar = ({categories}) => {
   const [active, setActive] = useState(false);
   const [active2, setActive2] = useState(false);
   const [active3, setActive3] = useState(false);
-  const [categories, setCategories] = useState([]);
+  const [cat, setCategories] = useState([]);
   const [beginner, setBeginner] = useState([]);
   
   const handleClick2 = ()=>{setActive2(!active2);};
   const handleClick = () => {setActive(!active);};
   const handleClick3 = ()=>{setActive3(!active3);};
 
-  useEffect(()=>{getCategories().then((newCategories)=>setCategories(newCategories));},[]);
+  useEffect(()=>{setCategories(categories)},[]);
   useEffect(()=>{getCategories_beginner().then((beginner)=>setBeginner(beginner));},[]);
-
+console.log(categories)
 return (   
 <nav className=" bg-gray-900 pt-3 pb-2 shadow-gray-900 shadow-lg mx-auto">
   <div className="flex justify-between">
     <div className="flex">
-      <Link href="/">
-        <a>
-        <Image src="/Logo_v14-min.png" alt="Cryptoeducating Logo" className='cursor-pointer' width={265} height={75}/>
-        </a>
-      </Link>
+      <Link href="/"><a><Image src="/Logo_v14-min.png" alt="Cryptoeducating Logo" className='cursor-pointer' width={265} height={75}/></a></Link>
         
     <div className="md:flex hidden items-center space-x-1 text-white text-lg relative">
       <div className='relative'>
-        <button className="flex flex-row items-center px-3 mx-5 py-2 text-center rounded-lg" onClick={handleClick2}>
+        <button className="flex flex-row items-center px-3 mx-5 py-2 text-center rounded-lg nav" onClick={handleClick2}>
           <span>Categories</span>
           <svg fill="currentColor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path></svg>
         </button>
-          <div className={`${active2 ? '' : "hidden"} absolute w-full mt-2 rounded-md shadow-lg  `}>
+          <div className={`${active2 ? '' : "hidden"} absolute w-full mt-2 rounded-md shadow-lg navitem `}>
             <div className="bg-gray-900 rounded-lg grid grid-cols-2">
               {categories.map((category)=>(
                 <div className='p-2 mt-2 text-sm text-center hover:bg-gray-700 rounded-lg' key={category.id}>
                   <Link key={category.id} href={`/category/${category.slug}`}>
-                    <a className='font-semibold bg-transparent'>{category.name}</a>
+                    <a className='font-semibold bg-transparent' onClick={setActive2(false)}>{category.name}</a>
                   </Link>
                 </div>
               ))}
@@ -134,3 +131,10 @@ return (
 }
 
 export default Navbar
+
+export async function getStaticProps(){
+  const categories = await getCategoriesAll();
+  return{
+      props:{categories},
+  };
+}
