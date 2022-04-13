@@ -8,7 +8,7 @@ const Tools = ({tools}) => {
         <h1 className='text-3xl text-center py-5'>Tools</h1>
         {tools.map((tool)=>{
             
-           return <ToolCard tool={tool}/>
+           return <ToolCard tool={tool} key={tool.id}/>
         })}
     </div>
   )

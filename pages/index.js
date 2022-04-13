@@ -1,13 +1,11 @@
 import Head from 'next/head'
-import { getPosts } from '../services'
 import Header from '../components/Header.jsx'
 import BeginnerPosts from '../components/BeginnerPosts.jsx'
 import Tools from '../components/Tools.jsx'
-import Promosection from '../components/Promosection'
 
 
 
-export default function Home({posts}) {
+export default function Home() {
   return (
     <div>
       
@@ -22,21 +20,6 @@ export default function Home({posts}) {
       <br/>
       <br/>
       <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      
     </div>
   )
-}
-
-export async function getStaticProps(){
-  const posts = (await getPosts()) || [];
-
-  return{
-    props:{posts}
-  }
 }

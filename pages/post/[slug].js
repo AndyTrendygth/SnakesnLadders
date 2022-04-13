@@ -1,5 +1,5 @@
 import React from 'react'
-import { getPostDetails, getPosts } from '../../services'
+import { getPostDetails, getPosts2 } from '../../services'
 import PostDetail from '../../components/PostDetail'
 
 const PostDetails = ({post}) => {
@@ -21,10 +21,10 @@ export async function getStaticProps({params}){
   }
 
 export async function getStaticPaths(){
-    const posts = await getPosts();
+    const posts = await getPosts2();
 
     return{
-        paths:posts.map(({node:{slug}})=>({params:{slug}})),
+        paths:posts.map(({slug})=>({params:{slug}})),
         fallback: false,
     }
 }

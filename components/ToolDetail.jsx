@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { RichText } from '@graphcms/rich-text-react-renderer';
+import Image from 'next/image';
 
 const ToolDetail = ({tool}) => {
 
@@ -77,14 +78,13 @@ return (
                 </a></Link>); 
             }
           },
-          img:({children, src, title, width, height, altText})=><img
+          img:({ src, title, width, height, altText})=><Image
           src={src}
           title={title}
           width={width}
           height={height}
           alt={altText}
-          >{children}
-          </img>,
+          />,
           iframe:({children, url, width, height})=><iframe
           url={url}
           width={width}

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { getCategories, getCategories_beginner } from '../services';
 import { useEffect } from 'react/cjs/react.development';
 import SearchComponent from './SearchComponent';
+import Image from 'next/image'
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -24,7 +25,9 @@ return (
   <div className="flex justify-between">
     <div className="flex">
       <Link href="/">
-        <img src="/Logo_v14.png" alt="Logo" className=' cursor-pointer'/>
+        <a>
+        <Image src="/Logo_v14-min.png" alt="Cryptoeducating Logo" className='cursor-pointer' width={265} height={75}/>
+        </a>
       </Link>
         
     <div className="md:flex hidden items-center space-x-1 text-white text-lg relative">
@@ -36,7 +39,7 @@ return (
           <div className={`${active2 ? '' : "hidden"} absolute w-full mt-2 rounded-md shadow-lg  `}>
             <div className="bg-gray-900 rounded-lg grid grid-cols-2">
               {categories.map((category)=>(
-                <div className='p-2 mt-2 text-sm text-center hover:bg-gray-700 rounded-lg'>
+                <div className='p-2 mt-2 text-sm text-center hover:bg-gray-700 rounded-lg' key={category.id}>
                   <Link key={category.id} href={`/category/${category.slug}`}>
                     <a className='font-semibold bg-transparent'>{category.name}</a>
                   </Link>

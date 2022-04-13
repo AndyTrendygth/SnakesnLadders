@@ -7,10 +7,10 @@ const promocodes = ({promolinks, feats}) => {
     <div className='text-center pt-3 mb-1'>
         <h1 className='text-3xl text-center'>All available Promo Codes and Affiliates!</h1>
         {feats.map((feat)=>{
-        return <Promolink promolink={feat} feat={true}/>
+        return <Promolink promolink={feat} feat={true} key={feats.id}/>
         })}
         {promolinks.map((promolink)=>{
-            return <Promolink promolink={promolink} feat={false}/>
+            return <Promolink promolink={promolink} feat={false} key={promolinks.id}/>
         })}
     </div>
   )

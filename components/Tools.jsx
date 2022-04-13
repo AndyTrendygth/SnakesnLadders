@@ -1,12 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './Header.module.css'
+import bg from "../public/Toolsbg_v5-min.png"
 
 const Tools = () => {
   return (
-    <div className={` ${styles.Tools} flex md:flex-row flex-col justify-around py-8`}>
+    <div className={`  flex md:flex-row flex-col justify-around py-8`} style={{
+      backgroundImage: `url(${bg.src})`,
+      width: '100%',
+      height: '100%',
+    }}>
  
-    <div className='flex flex-col text-center items-center justify-center'>
+    <div className='flex flex-col text-center items-center justify-center' >
     <h1 className={` ${styles.h1} text-4xl font-black p-2`}>THE BEST TOOLS FOR YOU!</h1>
     
     <div className='flex justify-center p-4'>

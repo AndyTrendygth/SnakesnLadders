@@ -5,11 +5,16 @@ Ideen:
 - Über der Navbar so ein Feld einbauen wo man einen Verweis auf Neue Features hat, wie bei Coinmarketcap, soll wegklickbar sein
 
 TopTodo: 
-
+- open graph tags wenn artikel über socials geshared werden bzw bessere Ansicht search engine
+- Links checken ob alles richtig ist
+- robots.txt in /public
+- Custom 404 page 500, 503
 - Verweise auf die Seiten, Seiten erstellen
  - Terms of Services & Privacy Policy
 - Accounts auf allen Social Plattformen claimen
-- Navbar Mobile Ansicht updaten
+
+Vor Deploy:
+-xml sitemap routen ändern auf die echte domain
 
 Tools.jsx(page):
 - Listet alle Tools aus dem Schema auf in einer Art von Liste mit Pfeilen nach rechts
@@ -93,8 +98,11 @@ DONE:
  - Funktioniert nach allen Kategorien, Posts, Tools und Promos
  - Design
 - Kurze Promo Section mit den aktuell verfügbaren PromoCodes + Aktionen + Newsletter
-
-
-
+- diverser Error/Warnings behoben
+- Navbar Mobile Ansicht updaten
+- xml sitemap
+ - abfrage an graphql posts, tools, categories
+ - diese mappen und ein <url> returnen mit domain/post/name
+- Bilder komprimieren
 
   

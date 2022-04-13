@@ -2,6 +2,7 @@ import React from 'react'
 import Link from "next/link"
 import FeaturedPosts from './FeaturedPosts';
 import { RichText } from '@graphcms/rich-text-react-renderer';
+import Image from "next/image"
 
 const PostDetail = ({post}) => {
 
@@ -38,7 +39,7 @@ const PostDetail = ({post}) => {
                 {post.title}    
             </div>
             <div className='justify-center p-3'>
-                <img src={post.featuredImage.url} alt={post.title} className="rounded-xl"/>
+                <Image src={post.featuredImage.url} alt={post.title} className="rounded-xl" width={1600} height={900}/>
             </div>
             <div className='flex flex-col bg-gray-700 rounded-lg mx-3 mb-4 pb-2 text-left'>
                 <h2 className='text-2xl text-center'>Content Table</h2>
@@ -89,14 +90,13 @@ const PostDetail = ({post}) => {
                 </a></Link>); 
             }
           },
-          img:({children, src, title, width, height, altText})=><img
+          img:({ src, title, width, height, altText})=><Image 
           src={src}
           title={title}
           width={width}
           height={height}
           alt={altText}
-          >{children}
-          </img>,
+          />,
           iframe:({children, url, width, height})=><iframe
           url={url}
           width={width}

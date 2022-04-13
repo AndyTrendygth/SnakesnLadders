@@ -3,40 +3,13 @@ import {request,gql} from "graphql-request";
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
-
-//allgemeines GetPosts
-export const getPosts= async()=>{
-    const query = gql`
-    query MyQuery {
-  postsConnection {
-    edges {
-      node {
-        createdAt
-        slug
-        title
-        excerpt
-        featuredImage {
-          url
-        }
-        categories {
-          name
-          slug
-        }
-      }
-    }
-  }
-}
-    `
-    const result = await request(graphqlAPI, query);
-    return result.postsConnection.edges;
-}
-
 export const getPosts2  = async()=>{
   const query = gql`
   query MyQuery {
   posts {
     slug
     title
+    id
   }
 }
   `
@@ -50,6 +23,7 @@ export const getCategories = async()=>{
   categories(where: {getStarted: false}) {
     name
     slug
+    id
   }
 }
   `
@@ -63,6 +37,7 @@ export const getCategoriesAll = async()=>{
   categories() {
     name
     slug
+    id
   }
 }
   `
@@ -76,6 +51,7 @@ export const getCategories_beginner = async()=>{
   categories(where: {getStarted: true}) {
     name
     slug
+    id
   }
 }
   `
@@ -89,14 +65,14 @@ export const getPosts_beginner = async()=>{
   posts(where: {beginner: true}) {
     title
     slug
-    excerpt
+    id
     createdAt
     featuredImage {
       url
-      createdAt
     }
     categories {
       name
+      id
     }
   }
 }
@@ -113,6 +89,7 @@ export const getPostDetails= async(slug)=>{
       slug
       title
       excerpt
+      id
       featuredImage {
         url
       }
@@ -135,6 +112,7 @@ export const getPosts_similar = async(slug,categories)=>{
   query MyQuery($categories: [String!], $slug: String!) {
   posts(where: {categories_some: {slug_in: $categories}, AND: {slug_not: $slug}}) {
     title
+    id
     slug
     featuredImage{url}
     categories {
@@ -153,6 +131,7 @@ export const getCategoryPosts = async(slug)=>{
   query MyQuery( $slug: String!) {
   posts(where: {categories_some: {slug: $slug}}) {
     title
+    id
     slug
     createdAt
     excerpt
@@ -174,6 +153,7 @@ export const getTools = async()=>{
   query MyQuery {
   tools {
     name
+    id
     slug
     description
   }
@@ -188,6 +168,7 @@ export const getToolDetail = async(slug)=>{
   query MyQuery($slug:String!) {
   tool(where:{slug:$slug}) {
     name
+    id
     slug
     content {
       raw
@@ -205,6 +186,7 @@ export const getPromonoFeat = async()=>{
   query MyQuery {
   promolinks(where: {featured: false}) {
     name
+    id
     link
     description
     featured
@@ -220,6 +202,7 @@ export const getPromoFeat = async()=>{
   query MyQuery {
   promolinks(where: {featured: true}) {
     name
+    id
     link
     description
     featured
@@ -235,6 +218,7 @@ export const getPromo = async()=>{
   query MyQuery {
   promolinks {
     name
+    id
     link
     description
     featured
