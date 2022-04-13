@@ -25,8 +25,8 @@ const PostDetail = ({post}) => {
     return (
         <div className=' '>
     <div className='flex flex-row pt-3 mb-4'>
-        <div className='basis-1/4'></div>
-        <div className='flex flex-col text-center basis-1/2'>
+        <div className='md:basis-1/4 basis-1/8'></div>
+        <div className='flex flex-col text-center md:basis-1/2 basis-6/8'>
             <div className='flex flex-row'>
                 {post.categories.map((category)=>(
                     <Link href={`/category/${category.slug}`}>
@@ -105,7 +105,7 @@ const PostDetail = ({post}) => {
         }}/>
             </div>
         </div>
-        <div className='flex basis-1/4'></div>
+        <div className='flex md:basis-1/4'></div>
     </div>
     <div className='justify-center items-center my-4'>
         <h1 className='text-3xl text-center mt-4 my-4'>Related Posts</h1>

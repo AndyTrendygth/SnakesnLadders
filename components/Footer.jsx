@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <footer className='m-5 pt-5'>
-        <div className='flex flex-row align-top justify-around'>
+        <div className='flex md:flex-row align-top justify-around flex-col'>
             <div className='flex flex-col justify-start'>
                 <Link href="/"><img src="/Logo_v14.png" alt="Logo" className=' cursor-pointer'/></Link>
                 <p>&copy; {new Date().getFullYear()} Cryptoeducating</p>
@@ -25,7 +25,7 @@ const Footer = () => {
                 <a href='mailto:business@cryptoeducating.net'> Advertise</a>
                 <p>Terms of Services</p>
             </div>
-            <div className='flex flex-col'>
+            <div className='flex md:flex-col flex-row'>
                 <a href="https://www.twitter.com">
                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

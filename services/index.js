@@ -35,9 +35,8 @@ export const getPosts2  = async()=>{
   const query = gql`
   query MyQuery {
   posts {
-    title
     slug
-    createdAt
+    title
   }
 }
   `
@@ -220,6 +219,21 @@ export const getPromoFeat = async()=>{
   const query = gql`
   query MyQuery {
   promolinks(where: {featured: true}) {
+    name
+    link
+    description
+    featured
+  }
+}
+  `
+  const result = await request(graphqlAPI,query);
+  return result.promolinks
+}
+
+export const getPromo = async()=>{
+  const query = gql`
+  query MyQuery {
+  promolinks {
     name
     link
     description

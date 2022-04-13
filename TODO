@@ -5,17 +5,11 @@ Ideen:
 - Über der Navbar so ein Feld einbauen wo man einen Verweis auf Neue Features hat, wie bei Coinmarketcap, soll wegklickbar sein
 
 TopTodo: 
-- Kurze Promo Section mit den aktuell verfügbaren PromoCodes + Aktionen + Newsletter
-- Search Widget
- - Anschauen ob es Lösungen von Graphcms direkt gibt
-  - Abfrage an alles ob der String irgendein Ergebnis liefert?
- - könnte komplex werden
+
 - Verweise auf die Seiten, Seiten erstellen
  - Terms of Services & Privacy Policy
 - Accounts auf allen Social Plattformen claimen
 - Navbar Mobile Ansicht updaten
-- Headertext/Werbespruch neu überlegen
- - Unter dem Header muss noch irgendwas grafisches hin sonst schaut es so fad aus
 
 Tools.jsx(page):
 - Listet alle Tools aus dem Schema auf in einer Art von Liste mit Pfeilen nach rechts
@@ -95,6 +89,11 @@ DONE:
 - Contact
  - Erstellt + kurzer Text
  - Team Members
+- Search Component
+ - Funktioniert nach allen Kategorien, Posts, Tools und Promos
+ - Design
+- Kurze Promo Section mit den aktuell verfügbaren PromoCodes + Aktionen + Newsletter
+
 
 
 

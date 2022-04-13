@@ -24,8 +24,8 @@ const getHeading = (index, text, type) => {
 return (
   <div>
     <div className='flex flex-row pt-3 mb-4'>
-      <div className='basis-1/4'></div>
-      <div className='flex flex-col rounded-lg mx-3 mb-4 pb-2 text-center basis-1/2'>
+      
+      <div className='flex flex-col rounded-lg mx-3 mb-4 pb-2 text-center basis-3/4'>
       <h1 className='text-3xl'>{tool.name}</h1>
       <div className='flex flex-col bg-gray-700 rounded-lg mx-3 my-4 pb-2 text-left'>
         <h2 className='text-2xl text-center'>Content Table</h2>

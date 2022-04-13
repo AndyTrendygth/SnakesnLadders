@@ -4,7 +4,7 @@ import { getToolDetail, getTools } from '../../services';
 
 const Tools = ({tool}) => {
   return (
-    <div>
+    <div className='flex flex-col'>
         <ToolDetail tool={tool}/>
     </div>
   )

@@ -11,8 +11,7 @@ const CategoryPage = ({posts}) => {
   return (
     <div className='mx-5 my-8'>
         <h1 className='text-3xl text-center my-3 capitalize'>{slug}</h1>
-        <div className='grid grid-cols-3 grid-flow-row'>
-            
+        <div className='grid md:grid-cols-3 grid-flow-row'>
             {posts.map((post, index)=>{
                 return <PostCard key={index}  post={post}/>
                
