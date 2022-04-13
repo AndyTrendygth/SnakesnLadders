@@ -11,7 +11,7 @@ const PostCard = ({post}) => {
         <img src={post.featuredImage.url} alt="Article Image" className='object-contain rounded-lg' />
         <div className='flex flex-row pt-2'>
           {post.categories.map((category)=>(
-            <p className='p-1 mx-1 font-light bg-gray-700 rounded-lg text-left'>{category.name}</p>
+            <p className='p-1 mx-1 font-light bg-gray-700 rounded-lg text-left' key={category.slug}>{category.name}</p>
           ))}
           
         </div>

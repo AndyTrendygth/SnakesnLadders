@@ -43,10 +43,8 @@ const Navbar = () => {
             <div className=" bg-gray-900 rounded-md grid grid-cols-2">
               {categories.map((category)=>(
                 <div className='p-2 mt-2 text-sm text-center hover:bg-gray-700 rounded-lg'>
-                <Link key={category.slug} href={`/category/${category.slug}`}>
-                 <a className='font-semibold bg-transparent'>
-                  {category.name}
-                  </a>
+                <Link key={category.id} href={`/category/${category.slug}`}>
+                 <a className='font-semibold bg-transparent'>{category.name}</a>
                 </Link>
                 </div>
               ))}
@@ -62,7 +60,7 @@ const Navbar = () => {
         <div className={`${active3 ? '' : "hidden"} absolute w-full mt-2 rounded-md shadow-lg`}>
           <div className='rounded-md px-3 py-2 mx-5 bg-gray-900'>
             {beginner.map((beginner)=>(
-                <Link key={beginner.slug} href={`/category/${beginner.slug}`}>
+                <Link key={beginner.id} href={`/category/${beginner.slug}`}>
                   <a className='block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-md hover:bg-gray-400'>
                     {beginner.name}
                   </a>
