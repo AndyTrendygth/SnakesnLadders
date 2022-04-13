@@ -5,6 +5,7 @@ Ideen:
 - Über der Navbar so ein Feld einbauen wo man einen Verweis auf Neue Features hat, wie bei Coinmarketcap, soll wegklickbar sein
 
 TopTodo: 
+- On page seo
 - open graph tags wenn artikel über socials geshared werden bzw bessere Ansicht search engine
 - Links checken ob alles richtig ist
 - robots.txt in /public
@@ -12,9 +13,12 @@ TopTodo:
 - Verweise auf die Seiten, Seiten erstellen
  - Terms of Services & Privacy Policy
 - Accounts auf allen Social Plattformen claimen
+- promo codes einrichten
 
 Vor Deploy:
--xml sitemap routen ändern auf die echte domain
+- xml sitemap routen ändern auf die echte domain
+- Links checken
+- test posts, tools, promos clearen
 
 Tools.jsx(page):
 - Listet alle Tools aus dem Schema auf in einer Art von Liste mit Pfeilen nach rechts

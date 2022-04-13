@@ -9,6 +9,7 @@ const Tools = () => {
       backgroundImage: `url(${bg.src})`,
       width: '100%',
       height: '100%',
+      backgroundRepeat:"no-repeat"
     }}>
  
     <div className='flex flex-col text-center items-center justify-center' >
