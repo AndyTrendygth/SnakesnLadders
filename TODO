@@ -5,6 +5,8 @@ Ideen:
 - Über der Navbar so ein Feld einbauen wo man einen Verweis auf Neue Features hat, wie bei Coinmarketcap, soll wegklickbar sein
 
 TopTodo: 
+- SWR, data fetchen
+- Sticky footer
 - On page seo
 - open graph tags wenn artikel über socials geshared werden bzw bessere Ansicht search engine
 - Links checken ob alles richtig ist
