@@ -10,6 +10,11 @@ const SearchComponent = () => {
     const [tools,setTools]=useState([]);
     const [promos,setPromo]=useState([]);
     const [search,setSearch]=useState("");
+    const [act,setAct]=useState(false);
+
+    const handle = ()=>{
+        setAct(!act);
+    }
    
     useEffect(()=>{
         getPosts2().then((result)=>{
@@ -28,12 +33,15 @@ const SearchComponent = () => {
 
   return (
     <div>
-        <input className='search-input py-2 px-3 rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 outline-none'
+        <input className={`search-input py-2 px-3 rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 outline-none`}
         type="text" 
         placeholder="Search something..."
-        onChange={(event)=>setSearch(event.target.value)}
+        onChange={(event)=>{
+            setSearch(event.target.value)
+            setAct(false)
+        }}
         />
-       <div className={` flex flex-col absolute bg-gray-900 p-2 rounded-lg focus:block`}>
+       <div className={`${act ? "hidden":""} flex flex-col absolute bg-gray-900 p-2 rounded-lg focus:block`}>
            {posts.filter((val)=>{
                if(search==""){
                    
@@ -42,7 +50,7 @@ const SearchComponent = () => {
                    return val
                }
            }).map((post)=>{
-           return <Link href={`/post/${post.slug}`}><a><div className='hover:bg-gray-700 rounded-lg p-1'>{post.title}</div></a></Link>
+           return <Link href={`/post/${post.slug}`}><a onClick={handle}><div className='hover:bg-gray-700 rounded-lg p-1'>{post.title}</div></a></Link>
        })}
        {categories.filter((val)=>{
                if(search==""){
@@ -52,7 +60,7 @@ const SearchComponent = () => {
                    return val
                }
            }).map((category)=>{
-           return <Link href={`/category/${category.slug}`}><a><div className='hover:bg-gray-700 rounded-lg p-1'>{category.name}</div></a></Link>
+           return <Link href={`/category/${category.slug}`}><a onClick={handle}><div className='hover:bg-gray-700 rounded-lg p-1'>{category.name}</div></a></Link>
        })}
        {tools.filter((val)=>{
                if(search==""){
@@ -62,7 +70,7 @@ const SearchComponent = () => {
                    return val
                }
            }).map((tool)=>{
-           return <Link href={`/tools/${tool.slug}`}><a><div className='hover:bg-gray-700 rounded-lg p-1'>{tool.name}</div></a></Link>
+           return <Link href={`/tools/${tool.slug}`}><a onClick={handle}><div className='hover:bg-gray-700 rounded-lg p-1'>{tool.name}</div></a></Link>
        })}
        {promos.filter((val)=>{
                if(search==""){
@@ -72,7 +80,7 @@ const SearchComponent = () => {
                    return val
                }
            }).map((promo)=>{
-           return <Link href={`${promo.link}`}><a><div className='hover:bg-gray-700 rounded-lg p-1'>{promo.name}</div></a></Link>
+           return <Link href={`${promo.link}`}><a onClick={handle}><div className='hover:bg-gray-700 rounded-lg p-1'>{promo.name}</div></a></Link>
        })}
 
        </div>

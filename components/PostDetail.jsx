@@ -36,7 +36,7 @@ const PostDetail = ({post}) => {
                 ))}
             </div>
             <div className='text-4xl text-center my-4 '>
-                {post.title}    
+                <h1>{post.title}</h1>    
             </div>
             <div className='justify-center p-3'>
                 <Image src={post.featuredImage.url} alt={post.title} className="rounded-xl" width={1600} height={900}/>
@@ -74,7 +74,7 @@ const PostDetail = ({post}) => {
           >
           {children}
           </pre>),
-          p: ({children})=><p>{children}</p>,
+          p: ({children})=><p className='text-lg'>{children}</p>,
           a: ({ children, openInNewTab, href, rel, ...rest }) => {
             if (href.match(/^https?:\/\/|^\/\//i)) {
               return (

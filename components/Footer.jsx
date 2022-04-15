@@ -6,21 +6,23 @@ import Image from 'next/image'
 //4 Spalten Layout links Logo + copyright darunter; Discover Spalte, Company spalte, Products
 const Footer = () => {
   return (
-    <footer className='m-5 pt-5'>
+    <footer className='m-5 pt-5 '>
         <div className='flex md:flex-row align-top justify-around flex-col'>
             <div className='flex flex-col justify-start'>
-                <Link href="/"><a><Image src="/Logo_v14-min.png" alt="Logo" className='cursor-pointer' layout='responsive' width={265} height={75}/></a></Link>
+                <Link href="/"><a><Image src="/Logo_v14-min.png" alt="Logo" className='cursor-pointer'  width={265} height={75}/></a></Link>
                 <p>&copy; {new Date().getFullYear()} Cryptoeducating</p>
                 <Link href="https://www.etherscan.io"><a>Donate &#128151;</a></Link>
             </div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col mb-3'>
                 <h3 className='font-semibold'>Discover</h3>
+                <br />
                 <Link href="/category/crypto-basics"><a className='cursor-pointer'>Beginner Posts</a></Link>
                 <Link href="/tools"><a className='cursor-pointer'>Tools</a></Link>
                 <Link href="/promocodes"><a className='cursor-pointer'>Promo Codes</a></Link>
             </div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col mb-3'>
                 <h3 className='font-semibold'>Team</h3>
+                <br />
                 <Link href="/about"><a>About us</a></Link>
                 <a href='https://forms.gle/5Kt2GV2Sa5dzuaxLA'>Request Topics/Feedback</a>
                 <a href='mailto:business@cryptoeducating.net'> Advertise</a>

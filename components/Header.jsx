@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import styles from "./Header.module.css"
-import bg from "../public/Headerbg_v4-min.png"
-
-
+import bg from "../public/Headerbg_v5-min.png"
 
 const Header = () => {
   return ( 
@@ -11,7 +9,9 @@ const Header = () => {
       backgroundImage: `url(${bg.src})`,
       width: '100%',
       height: '100%',
-    }} >
+      backgroundRepeat:'no-repeat',
+    }}>
+      
         <h1 className={`${styles.h1} lg:text-5xl pt-8 font-black text-2xl`} >WELCOME TO</h1>
         <h1 className={`${styles.h1} lg:text-5xl pt-4 font-black text-2xl`} >CRYPTOEDUCATING.NET</h1>
         <h2 className='text-2xl pb-8 font-thin'>crypto made simple for you</h2>

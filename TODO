@@ -5,9 +5,8 @@ Ideen:
 - Über der Navbar so ein Feld einbauen wo man einen Verweis auf Neue Features hat, wie bei Coinmarketcap, soll wegklickbar sein
 
 TopTodo: 
-- SWR, data fetchen
-- Sticky footer
 - On page seo
+ - Bei Postdetail, Tooldetail, categoryslug, about, index, promocodes
 - open graph tags wenn artikel über socials geshared werden bzw bessere Ansicht search engine
 - Links checken ob alles richtig ist
 - robots.txt in /public
@@ -110,5 +109,7 @@ DONE:
  - abfrage an graphql posts, tools, categories
  - diese mappen und ein <url> returnen mit domain/post/name
 - Bilder komprimieren
+- SWR, data fetchen
+- Sticky footer
 
   

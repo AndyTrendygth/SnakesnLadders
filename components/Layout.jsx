@@ -1,16 +1,27 @@
 import React from 'react'
-import Navbar from './Navbar'
 import Footer from './Footer'
 import Nav from './Nav'
+import { request } from 'graphql-request'
+import useSWR from 'swr'
 
-//const fetcher = query => request(graphql(sollte der key aus dem .env sein),query(muss händisch rein leider))
+const fetcher = query => request(process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT,query);
 
 const Layout = ({children}) => {  
-  //const {data,error} = useSWR(`{abfrage}`,fetcher)
-  //data hält das ergebnis von der Abfrage, data einfach an Nav geben 
+  const {data,error} = useSWR(`{
+    categories {
+    name
+    slug
+    id
+    getStarted
+    }
+  }
+`,fetcher)
+ 
+  if(error) return <div>Failed to load</div>
+  if (!data) {return <div>Loading...</div>}
   return (
     <>
-    <Nav categories={categories} beginner={beginner}/>
+    <Nav categories={data} />
     <main>{children}</main>
     <Footer/>
     </>
