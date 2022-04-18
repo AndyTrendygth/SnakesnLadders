@@ -7,7 +7,7 @@ import Image from 'next/image'
 const Footer = () => {
   return (
     <footer className='m-5 pt-5 '>
-        <div className='flex md:flex-row align-top justify-around flex-col'>
+        <div className='flex md:flex-row align-top justify-between flex-col'>
             <div className='flex flex-col justify-start'>
                 <Link href="/"><a><Image src="/Logo_v14-min.png" alt="Logo" className='cursor-pointer'  width={265} height={75}/></a></Link>
                 <p>&copy; {new Date().getFullYear()} Cryptoeducating</p>

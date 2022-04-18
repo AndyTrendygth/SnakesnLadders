@@ -5,12 +5,10 @@ Ideen:
 - Über der Navbar so ein Feld einbauen wo man einen Verweis auf Neue Features hat, wie bei Coinmarketcap, soll wegklickbar sein
 
 TopTodo: 
-
-- Links checken ob alles richtig ist
 - promo codes einrichten
 
 Vor Deploy:
-- xml sitemap routen ändern auf die echte domain
+
 - Links checken
 - test posts, tools, promos clearen
 
@@ -111,6 +109,7 @@ DONE:
 - On page seo
  - Bei Postdetail, Tooldetail, categoryslug, about, index, promocodes
 - open graph tags wenn artikel über socials geshared werden bzw bessere Ansicht search engine
-
+- Links checken ob alles richtig ist
+- xml sitemap routen ändern auf die echte domain
 
   

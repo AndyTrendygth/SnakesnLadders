@@ -13,21 +13,24 @@ const terms = () => {
             <ul>
                 <li>
                     <p className='my-3'>1. Terms</p><br/>
-                    <p>By accessing the website at https://cryptoeducating.net you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing these services. The materials contained in these services are protected by applicable copyright and trademark law.</p>
+                    <p>By accessing the website at https://cryptoeducating.net and its subdomains you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing these services. The materials contained in these services are protected by applicable copyright and trademark law.</p>
                 </li>
                 <li>
                 <p className='my-3'>2. Usage of Content</p><br/>
-                <p>Permission is granted to temporarily download one copy of the materials (information or software) on CoinMarketCal SARL's services for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:<br/>
+                <p>Permission is granted to temporarily download one copy of the materials (information) on Cryptoeducatings services for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:<br/>
                 -	modify or copy the materials;<br/>
                 -	use the materials for any commercial purpose, or for any public display (commercial or non-commercial);<br/>
-                -	attempt to decompile or reverse engineer any software contained on CoinMarketCal SARL's services;<br/>
+                -	attempt to decompile or reverse engineer any software contained on Cryptoeducatings services;<br/>
                 -	remove any copyright or other proprietary notations from the materials; or<br/>
                 -	transfer the materials to another person or "mirror" the materials on any other server.<br/>
-                This license shall automatically terminate if you violate any of these restrictions and may be terminated by CoinMarketCal SARL at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</p>
+                This license shall automatically terminate if you violate any of these restrictions and may be terminated by Cryptoeducating at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</p>
                 </li>
                 <li>
-                <p className='my-3'>3. Disclaimer of Warranty</p><br/>
+                <p className='my-3'>3. Disclaimer</p><br/>
                 <p>
+                This service is no investment advice. All content pieces are for educational purpose. Please consider talking to your financial
+                advisor for investment advice.
+
                 THESE SERVICES ARE PROVIDED BY COMPANY ON AN “AS IS” AND “AS AVAILABLE” BASIS. COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES, OR THE INFORMATION, CONTENT OR MATERIALS INCLUDED THEREIN. YOU EXPRESSLY AGREE THAT YOUR USE OF THESE SERVICES, THEIR CONTENT, AND ANY SERVICES OR ITEMS OBTAINED FROM US IS AT YOUR SOLE RISK.
 
                 NEITHER COMPANY NOR ANY PERSON ASSOCIATED WITH COMPANY MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE SERVICES. WITHOUT LIMITING THE FOREGOING, NEITHER COMPANY NOR ANYONE ASSOCIATED WITH COMPANY REPRESENTS OR WARRANTS THAT THE SERVICES, THEIR CONTENT, OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL BE ACCURATE, RELIABLE, ERROR-FREE, OR UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, THAT THE SERVICES OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS OR THAT THE SERVICES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS.

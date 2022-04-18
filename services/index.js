@@ -147,40 +147,6 @@ const result = await request(graphqlAPI,query,{slug});
 return result.posts;
 }
 
-//get Tools
-export const getTools = async()=>{
-  const query = gql`
-  query MyQuery {
-  tools {
-    name
-    id
-    slug
-    description
-  }
-}
-  `
-  const result = await request(graphqlAPI,query);
-  return result.tools;
-}
-
-export const getToolDetail = async(slug)=>{
-  const query = gql`
-  query MyQuery($slug:String!) {
-  tool(where:{slug:$slug}) {
-    name
-    id
-    slug
-    content {
-      raw
-    }
-    description
-  }
-}
-  `
-  const result = await request(graphqlAPI,query,{slug});
-  return result.tool;
-}
-
 export const getPromonoFeat = async()=>{
   const query = gql`
   query MyQuery {

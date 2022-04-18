@@ -1,10 +1,10 @@
 import React from 'react'
 import fs from "fs"
-import { getPosts2, getCategoriesAll, getTools } from '../services'
+import { getPosts2, getCategoriesAll } from '../services'
 
 const Sitemap=()=>{}
 
-function getMap (posts,categories,tools,staticPages){
+function getMap (posts,categories,staticPages){
     
     return `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -20,7 +20,7 @@ function getMap (posts,categories,tools,staticPages){
        
         return `
         <url>
-        <loc>${`localhost:3000/post/${post.slug}`}</loc>
+        <loc>${`cryptoeducating.net/post/${post.slug}`}</loc>
         <lastmod>${new Date().toISOString}</lastmod>
         </url>
         `;
@@ -29,16 +29,7 @@ function getMap (posts,categories,tools,staticPages){
     
         return`
         <url>
-        <loc>${`localhost:3000/category/${category.slug}`}</loc>
-        <lastmod>${new Date().toISOString}</lastmod>
-        </url>
-        `;
-    }).join("")}
-    ${tools.map((tool)=>{
-         
-        return `
-        <url>
-        <loc>${`localhost:3000/tool/${tool.slug}`}</loc>
+        <loc>${`cryptoeducating.net/category/${category.slug}`}</loc>
         <lastmod>${new Date().toISOString}</lastmod>
         </url>
         `;
@@ -72,9 +63,8 @@ export async function getServerSideProps({res}){
 
     const posts = await getPosts2();
     const categories = await getCategoriesAll();
-    const tools =await getTools();
 
-    const sitemap = getMap(posts,categories,tools,staticPages)
+    const sitemap = getMap(posts,categories,staticPages)
 
     res.setHeader("Content-Type","text/xml");
     res.write(sitemap);
