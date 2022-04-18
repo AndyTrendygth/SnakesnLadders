@@ -1,8 +1,13 @@
 import React from 'react'
+import Head from "next/head"
 
 const about = () => {
   return (
     <div className='flex flex-col py-5 px-3 text-center'>
+      <Head>
+        <title>About | Cryptoeducating</title>
+        <meta name='description' content='The About Page of cryptoeducating'/>
+      </Head>
         <h1 className='text-3xl mb-5'>About</h1>
         <div className='text-left ml-5 mb-5'>
             <p>Cryptoeducating's purpose is to constantly educate the new and advanced crypto people. <br/>

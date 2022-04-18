@@ -1,8 +1,13 @@
 import React from 'react'
+import Head from "next/head"
 
 const privacy = () => {
   return (
     <div className='pt-5 ml-8 mr-8 text-left'> 
+    <Head>
+        <title>Privacy Policy | Cryptoeducating</title>
+        <meta name='description' content='The Privacy Policy of Cryptoeducating'/>
+    </Head>
     <h1 className='text-4xl mb-3'>Privacy Policy</h1>
     <div>
         <ul>

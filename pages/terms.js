@@ -1,8 +1,13 @@
 import React from 'react'
+import Head from "next/head"
 
 const terms = () => {
   return (
     <div className='pt-5 ml-8 mr-8 text-left'>
+      <Head>
+        <title>Terms of Services | Cryptoeducating</title>
+        <meta name='description' content='The terms of service of Cryptoeducating'/>
+    </Head>
         <h1 className='text-4xl mb-3'>Terms of Service</h1>
         <div>
             <ul>

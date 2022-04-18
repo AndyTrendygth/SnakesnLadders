@@ -3,6 +3,7 @@ import Link from "next/link"
 import FeaturedPosts from './FeaturedPosts';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Image from "next/image"
+import { Head } from 'next/document';
 
 const PostDetail = ({post}) => {
 
@@ -24,11 +25,13 @@ const PostDetail = ({post}) => {
     };
                                                    
     return (
-        <div className=' '>
+      
+        <div>
+         
     <div className='flex flex-row pt-3 mb-4'>
         <div className='md:basis-1/4 basis-1/8'></div>
         <div className='flex flex-col text-center md:basis-1/2 basis-6/8'>
-            <div className='flex flex-row'>
+            <div className='flex flex-row' key={post.id}>
                 {post.categories.map((category)=>(
                     <Link href={`/category/${category.slug}`}>
                     <a className='p-1 font-light bg-gray-700 rounded-lg text-left mr-2'>{category.name}</a>

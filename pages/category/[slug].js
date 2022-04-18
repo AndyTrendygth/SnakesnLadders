@@ -13,7 +13,7 @@ const CategoryPage = ({posts}) => {
       <>
       <Head>
           <title>All Articles in {slug} - simply explained | Cryptoeducating</title>
-          <meta name='description' content='View all the simply written articles about Defi, guides and tutorials.'/>
+          <meta name='description' content={`View all the simply written articles about ${slug}, guides and tutorials.`}/>
       </Head>
       <div className='mx-5 my-8'>
         <h1 className='text-3xl text-center my-3 capitalize'>{slug}</h1>

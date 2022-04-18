@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>Cryptoeducating.net</title>
         <meta name="Cryptoeducating" content="The place to learn everything in crypto" />
-        <meta title=''/>
+        <meta name='description' content='The Landing Page of cryptoeducating'/>
       </Head>
       <Header/>
       <BeginnerPosts/>
