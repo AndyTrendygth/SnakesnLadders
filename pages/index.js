@@ -8,10 +8,10 @@ import Tools from '../components/Tools.jsx'
 export default function Home() {
   return (
     <div>
-      
       <Head>
         <title>Cryptoeducating.net</title>
         <meta name="Cryptoeducating" content="The place to learn everything in crypto" />
+        <meta title=''/>
       </Head>
       <Header/>
       <BeginnerPosts/>

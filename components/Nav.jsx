@@ -43,16 +43,10 @@ const Nav = ({categories}) => {
                             </div>
                         }})
                         }
-                        
                     </div>
                 </div>
-            
             </div>
-            
             <div className='flex flex-row justify-between items-center'>
-                <div>
-                    <Link href="/tools"><a className='hover:bg-purple-700 p-3 rounded-lg'>Tools</a></Link>
-                </div>
                 <div>
                 <Link href="/promocodes"><a className='hover:bg-purple-700 p-3 rounded-lg'>Promo Codes</a></Link>
                 </div>
@@ -60,7 +54,6 @@ const Nav = ({categories}) => {
                     <SearchComponent/>
                 </div>
             </div>
-        
         </div>
         <div className="md:hidden flex justify-between mt-2 mr-2">
         <Link href="/"><a><Image src="/Logo_v14-min.png" alt="Cryptoeducating Logo" className='cursor-pointer' width={265} height={75}/></a></Link>
@@ -106,18 +99,13 @@ const Nav = ({categories}) => {
             </div>
             <div className='flex flex-row justify-center items-center'>
                 <div>
-                    <Link href="/tools"><a className='hover:bg-purple-700 p-3 rounded-lg'>Tools</a></Link>
-                </div>
-                <div>
                 <Link href="/promocodes"><a className='hover:bg-purple-700 p-3 rounded-lg'>Promo Codes</a></Link>
                 </div>
-                
             </div>
             <div className='flex flex-row m-4 justify-center'>
                     <SearchComponent/>
             </div>
         </div>
-       
     </nav>
   )
 }

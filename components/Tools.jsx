@@ -16,7 +16,7 @@ const Tools = () => {
     <h1 className={` ${styles.h1} text-4xl font-black p-2`}>THE BEST TOOLS FOR YOU!</h1>
     
     <div className='flex justify-center p-4'>
-      <Link href="/tools">
+      <Link href="/category/tools">
         <a className="bg-purple-700 rounded-md px-3 py-2 mx-5 text-xl">Tools</a>
       </Link>
     </div>
